@@ -2,7 +2,7 @@ package roomreservation
 
 import grails.rest.Resource
 
-@Resource(uri = "/rooms")
+@Resource(uri = "/rooms", superClass = SearchRestfulController)
 class Room {
 
     String name
@@ -17,3 +17,8 @@ class Room {
         max(min: 1)
     }
 }
+
+//For search:
+//superclass added
+//created new controller SearchRestfulController
+//url in UrlMappings added

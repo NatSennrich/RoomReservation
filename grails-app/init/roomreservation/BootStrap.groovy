@@ -15,6 +15,7 @@ class BootStrap {
 
         Person dierk = save(new Person(firstName: "Dierk", lastName: "König", email: "dierk.koenig@fhnw.ch"))
         Person christian = save(new Person(firstName: "Christian", lastName: "Ribeaud", email: "christian.ribeaud@fhnw.ch"))
+        Person norberto = save(new Person(firstName: "Norberto", lastName: "Sennrich", email: "norberto.sennrich@students.fhnw.ch"))
 
         Date today = new Date().clearTime();
         save(new Booking(booker: dierk, room: windowRoom, date: today - 1, slot: Booking.AM))
@@ -24,6 +25,7 @@ class BootStrap {
 
         save(new Booking(booker: christian, room: windowRoom, date: today, slot: Booking.AM))
         save(new Booking(booker: christian, room: cornerRoom, date: today, slot: Booking.AM))
+        save(new Booking(booker: norberto, room: cornerRoom, date: today+1, slot: Booking.AM))
     }
 
     static save(domainObject) {
