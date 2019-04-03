@@ -5,18 +5,6 @@ import spock.lang.Specification
 
 class PersonSpec extends Specification implements DomainUnitTest<Person> {
 
-<<<<<<< HEAD
-    def setup() {
-    }
-
-    def cleanup() {
-    }
-
-    void "test something"() {
-        expect:"fix me"
-            true == false
-    }
-=======
     void "First name can NEITHER be null NOR blank"() {
         expect:
         domain != null
@@ -51,6 +39,4 @@ class PersonSpec extends Specification implements DomainUnitTest<Person> {
         then:
         domain.validate(['email'])
     }
-    
->>>>>>> upstream/solution
 }

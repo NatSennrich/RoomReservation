@@ -5,17 +5,7 @@ import spock.lang.Specification
 
 class RoomSpec extends Specification implements DomainUnitTest<Room> {
 
-<<<<<<< HEAD
-    def setup() {
-    }
 
-    def cleanup() {
-    }
-
-    void "test something"() {
-        expect:"fix me"
-            true == false
-=======
     void "Insert a new person and find it"() {
         // Insert
         setup:
@@ -31,6 +21,5 @@ class RoomSpec extends Specification implements DomainUnitTest<Room> {
         then:
         rooms.size() == 1
         rooms[0].max == 40
->>>>>>> upstream/solution
     }
 }
